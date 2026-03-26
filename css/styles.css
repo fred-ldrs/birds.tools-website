@@ -240,6 +240,17 @@ p {
     border-top: 1px solid var(--gray-light);
 }
 
+.footer-birds {
+    margin-bottom: var(--space-sm);
+}
+
+.footer-birds img {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    opacity: 0.85;
+}
+
 .footer-tagline {
     font-size: 1.1rem;
     color: var(--mint-primary);
@@ -385,10 +396,14 @@ p {
     text-align: center;
 }
 
-.hub-logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: var(--space-sm);
+.hub-hero-image {
+    margin-top: var(--space-md);
+}
+
+.hub-hero-image img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
 }
 
 .hub-hero h1 {
