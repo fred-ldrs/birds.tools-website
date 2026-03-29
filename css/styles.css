@@ -303,6 +303,16 @@ p {
     margin: 0;
 }
 
+.footer-copyright a {
+    color: var(--gray-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-copyright a:hover {
+    color: var(--gray-medium);
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
