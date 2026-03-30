@@ -25,6 +25,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://birds.family/mamanbird/</loc>
+        <lastmod>2026-03-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://birds.family/printables/coloring/</loc>
         <lastmod>2026-03-29</lastmod>
         <changefreq>monthly</changefreq>
