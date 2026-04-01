@@ -178,7 +178,7 @@ const canonical   = canonicalUrl(lang, currentPath);
     background: var(--mint-bg-darker);
   }
 
-  /* ── Nav menu (desktop: inline flex) ───────────────────────── */
+  /* ── Nav menu (desktop: inline) ────────────────────────────── */
   .nav-menu {
     display: flex;
     align-items: center;
@@ -217,17 +217,16 @@ const canonical   = canonicalUrl(lang, currentPath);
   .nav-toggle[aria-expanded="true"] .bar-bot {
     transform: translateY(-6px) rotate(-45deg);
   }
-</style>
 
-<style is:global>
   /* ── Mobile nav ─────────────────────────────────────────────── */
   @media (max-width: 768px) {
     .nav-toggle {
-      display: flex !important;
+      display: flex;
       align-items: center;
       justify-content: center;
     }
 
+    /* Hidden by default on mobile */
     .nav-menu {
       display: none;
       position: absolute;
@@ -244,6 +243,7 @@ const canonical   = canonicalUrl(lang, currentPath);
       z-index: 99;
     }
 
+    /* Shown when toggle is clicked */
     .nav-menu.open {
       display: flex;
     }
