@@ -123,32 +123,7 @@ const canonical   = canonicalUrl(lang, currentPath);
     </div>
   </footer>
 
-  <script>
-    const btn  = document.getElementById('nav-toggle') as HTMLButtonElement | null;
-    const menu = document.getElementById('nav-menu');
-    const nav  = document.getElementById('site-nav');
-
-    btn?.addEventListener('click', () => {
-      const isOpen = menu?.classList.toggle('open') ?? false;
-      btn.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    // Close when clicking outside the nav
-    document.addEventListener('click', (e) => {
-      if (nav && !nav.contains(e.target as Node)) {
-        menu?.classList.remove('open');
-        btn?.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Close when a nav link is clicked (navigating to new page)
-    menu?.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        menu.classList.remove('open');
-        btn?.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
+  <script src="/js/nav.js" defer></script>
 
 </body>
 </html>
