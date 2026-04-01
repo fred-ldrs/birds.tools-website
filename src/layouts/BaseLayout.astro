@@ -15,9 +15,10 @@ export interface Props {
   t: Record<string, any>;
   pageMeta?: { title: string; description: string };
   currentPath?: string;
+  footerBirds?: boolean;
 }
 
-const { lang, t, pageMeta, currentPath = '' } = Astro.props;
+const { lang, t, pageMeta, currentPath = '', footerBirds = false } = Astro.props;
 
 const title       = pageMeta?.title       ?? t.meta.title;
 const description = pageMeta?.description ?? t.meta.description;
@@ -66,7 +67,7 @@ const canonical   = canonicalUrl(lang, currentPath);
       <ul class="site-nav-links">
         <li><a href={`/${lang}/`}           aria-current={currentPath === ''        ? 'page' : undefined}>{t.nav.home}</a></li>
         <li><a href={`/${lang}/about/`}     aria-current={currentPath === 'about/'  ? 'page' : undefined}>{t.nav.about}</a></li>
-        <li><a href={`/${lang}/coloring/`}  aria-current={currentPath === 'coloring/' ? 'page' : undefined}>{t.nav.coloring}</a></li>
+        <li><a href={`/${lang}/printables/coloring/`}  aria-current={currentPath === 'printables/coloring/' ? 'page' : undefined}>{t.nav.coloring}</a></li>
       </ul>
 
       <!-- Language Switcher -->
@@ -91,9 +92,11 @@ const canonical   = canonicalUrl(lang, currentPath);
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-birds">
-        <img src="/images/header_var2_cut.png" alt={t.footer.footerImgAlt} aria-hidden="true" />
-      </div>
+      {footerBirds && (
+        <div class="footer-birds">
+          <img src="/images/header_var2_cut.png" alt={t.footer.footerImgAlt} aria-hidden="true" />
+        </div>
+      )}
       <p class="footer-tagline">{t.footer.tagline}</p>
       <nav class="footer-links">
         <a href={`/${lang}/privacy/`}>{t.footer.privacy}</a>

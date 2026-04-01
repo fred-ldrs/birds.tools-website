@@ -79,7 +79,26 @@
     "flockEyebrow": "Le Groupe",
     "flockIntro": "Chaque oiseau a un rôle.",
     "flockText": "Le hibou veille sur la nuit.\nLa colombe porte les souvenirs.\nLe rouge-gorge apporte la chaleur.\nLa mésange aide au quotidien.\nLa pie garde ce qui compte.",
-    "flockOutro": "Un petit groupe, chacun avec un but.\nUne famille d'oiseaux pour la vôtre."
+    "flockOutro": "Un petit groupe, chacun avec un but.\nUne famille d'oiseaux pour la vôtre.",
+    "approachEyebrow": "Notre approche",
+    "approachText": "Petites applications. Un seul but chacune.\nPas de comptes. Pas de cloud. Pas de bruit.\nJuste des outils simples qui restent proches de vous —\ncomme de petits oiseaux perchés tranquillement dans votre quotidien.",
+    "whyEyebrow": "Pourquoi nous existons",
+    "whyText": "Les familles n'ont pas besoin de plus de complexité.\nElles ont besoin de petits moments de calme.\nUn souvenir capturé.\nUne nuit rendue plus douce.\nUne tâche simplifiée.\nC'est pourquoi les Oiseaux existent."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Politique de confidentialité \u2013 birds.family",
+      "description": "Politique de confidentialité de birds.family \u2013 vos données restent sur votre appareil. Pas de cloud, pas de suivi."
+    },
+    "backLink": "\u2190 Retour \u00e0 l'accueil",
+    "lastUpdated": "Derni\u00e8re mise \u00e0 jour : 9 mars 2026"
+  },
+  "imprint": {
+    "meta": {
+      "title": "Mentions l\u00e9gales \u2013 birds.family",
+      "description": "Mentions l\u00e9gales et informations de contact pour birds.family."
+    },
+    "backLink": "\u2190 Retour \u00e0 l'accueil"
   },
   "bebebirdie": {
     "meta": {

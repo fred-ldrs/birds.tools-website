@@ -1,15 +1,14 @@
 ---
 /**
- * /src/pages/[lang]/coloring.astro
- * Generated routes: /en/coloring/, /de/coloring/, /fr/coloring/
- * Replaces: printables/coloring/index.html
+ * /src/pages/[lang]/printables/coloring.astro
+ * Generated routes: /en/printables/coloring/, /de/printables/coloring/, /fr/printables/coloring/
  */
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLanguagePaths } from '../../utils/i18n.js';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getLanguagePaths } from '../../../utils/i18n.js';
 
-import en from '../../locales/en.json';
-import de from '../../locales/de.json';
-import fr from '../../locales/fr.json';
+import en from '../../../locales/en.json';
+import de from '../../../locales/de.json';
+import fr from '../../../locales/fr.json';
 
 const locales = { en, de, fr };
 
@@ -21,7 +20,7 @@ const { lang } = Astro.params as { lang: 'en' | 'de' | 'fr' };
 const t = locales[lang];
 const s = t.coloring;
 ---
-<BaseLayout lang={lang} t={t} pageMeta={s.meta} currentPath="coloring/">
+<BaseLayout lang={lang} t={t} pageMeta={s.meta} currentPath="printables/coloring/">
 
   <main class="coloring-placeholder">
     <div class="coloring-placeholder-inner">

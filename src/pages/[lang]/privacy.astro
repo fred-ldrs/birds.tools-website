@@ -1,0 +1,181 @@
+---
+/**
+ * /src/pages/[lang]/privacy.astro
+ * Generated routes: /en/privacy/, /de/privacy/, /fr/privacy/
+ * Legal content is NOT translated – the German text is authoritative.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLanguagePaths } from '../../utils/i18n.js';
+
+import en from '../../locales/en.json';
+import de from '../../locales/de.json';
+import fr from '../../locales/fr.json';
+
+const locales = { en, de, fr };
+
+export function getStaticPaths() {
+  return getLanguagePaths();
+}
+
+const { lang } = Astro.params as { lang: 'en' | 'de' | 'fr' };
+const t = locales[lang];
+const s = t.privacy;
+---
+<BaseLayout lang={lang} t={t} pageMeta={s.meta} currentPath="privacy/">
+
+  <main class="legal-page">
+    <div class="container">
+      <div class="legal-content">
+        <a href={`/${lang}/`} class="back-link">{s.backLink}</a>
+
+        <h1>Datenschutzerklärung</h1>
+        <p class="last-updated">{s.lastUpdated}</p>
+
+        <h2>Datenschutz auf einen Blick</h2>
+        <p>
+          Diese Website speichert keine personenbezogenen Daten, verwendet keine Cookies
+          und setzt keine Analyse- oder Tracking-Tools ein.
+        </p>
+        <p>
+          Beim Aufruf dieser Seite können technische Daten (z.&nbsp;B. IP-Adresse, Browsertyp)
+          automatisch durch den Hosting-Anbieter erfasst werden.
+          Wir haben keinen direkten Zugriff auf diese Daten.
+        </p>
+
+        <h2>Verantwortlicher</h2>
+        <p>
+          Frederik Lüders<br />
+          c/o Impressumservice Dein-Impressum<br />
+          Stettiner Straße 41, 35410 Hungen<br />
+          E-Mail: <a href="mailto:hello@lueders.app">hello@lueders.app</a>
+        </p>
+
+        <h2>Zur birds.family-App-Familie</h2>
+
+        <h3>Ausschließlich lokale Datenspeicherung</h3>
+        <p>
+          Alle Daten werden ausschließlich auf dem Gerät des Nutzers gespeichert.
+          Es findet keine Cloud-Synchronisation und keine Übertragung an Server statt.
+        </p>
+
+        <h3>Kein Konto erforderlich</h3>
+        <p>
+          Die Apps erfordern keine Registrierung. Es werden keine E-Mail-Adressen,
+          Benutzernamen, Passwörter oder sonstige personenbezogene Daten erhoben.
+        </p>
+
+        <h3>Kein Tracking oder Analytics</h3>
+        <p>
+          Wir verwenden keine Analyse-Tools, Tracking-Pixel oder Drittanbieter-Tracker.
+          Die Nutzung der Apps ist vollständig privat.
+        </p>
+
+        <h3>Geräteberechtigungen</h3>
+        <p>Die Apps können folgende Berechtigungen anfordern:</p>
+        <ul>
+          <li><strong>Speicher:</strong> zum Speichern von Daten und Fotos auf dem Gerät</li>
+          <li><strong>Kamera:</strong> zum Aufnehmen von Fotos (optional)</li>
+        </ul>
+        <p>Diese Berechtigungen dienen ausschließlich der Kernfunktionalität. Es werden keine Daten übertragen.</p>
+
+        <h3>Keine Drittanbieter-Dienste</h3>
+        <p>
+          Die Apps sind nicht mit Drittanbieter-Diensten, sozialen Netzwerken oder
+          Werbenetzwerken verknüpft.
+        </p>
+
+        <h2>Datenschutz von Kindern</h2>
+        <p>
+          Die Apps sind für Eltern konzipiert. Es werden keinerlei Daten erhoben –
+          alle Inhalte verbleiben sicher auf dem Gerät.
+        </p>
+
+        <h2>Änderungen dieser Erklärung</h2>
+        <p>
+          Änderungen werden auf dieser Seite veröffentlicht.
+          Bitte prüfen Sie diese Seite regelmäßig.
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Bei Fragen zum Datenschutz:<br />
+          E-Mail: <a href="mailto:hello@lueders.app">hello@lueders.app</a><br />
+          Weitere Angaben: <a href={`/${lang}/imprint/`}>{t.footer.imprint}</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding: var(--space-xl) 0;
+    min-height: 70vh;
+  }
+
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .legal-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+    color: var(--gray-dark);
+  }
+
+  .legal-content h2 {
+    font-size: 1.4rem;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--mint-primary);
+  }
+
+  .legal-content h3 {
+    font-size: 1.05rem;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+    color: var(--gray-dark);
+  }
+
+  .legal-content p,
+  .legal-content li {
+    margin-bottom: var(--space-sm);
+    line-height: 1.8;
+    color: var(--gray-medium);
+  }
+
+  .legal-content ul {
+    padding-left: var(--space-md);
+    margin-bottom: var(--space-sm);
+  }
+
+  .legal-content a {
+    color: var(--mint-primary);
+    text-decoration: none;
+  }
+
+  .legal-content a:hover {
+    text-decoration: underline;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--mint-primary);
+    text-decoration: none;
+    margin-bottom: var(--space-md);
+    transition: color 0.2s ease;
+    font-size: 0.9rem;
+  }
+
+  .back-link:hover {
+    color: var(--gray-dark);
+  }
+
+  .last-updated {
+    color: var(--gray-medium);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-lg);
+  }
+</style>

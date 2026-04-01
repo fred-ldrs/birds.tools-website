@@ -1,0 +1,165 @@
+---
+/**
+ * /src/pages/[lang]/imprint.astro
+ * Generated routes: /en/imprint/, /de/imprint/, /fr/imprint/
+ *
+ * Das Impressum ist eine gesetzliche Pflichtangabe nach §5 TMG (Deutschland).
+ * Der Inhalt wird NICHT übersetzt – die deutsche Fassung ist rechtsverbindlich.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLanguagePaths } from '../../utils/i18n.js';
+
+import en from '../../locales/en.json';
+import de from '../../locales/de.json';
+import fr from '../../locales/fr.json';
+
+const locales = { en, de, fr };
+
+export function getStaticPaths() {
+  return getLanguagePaths();
+}
+
+const { lang } = Astro.params as { lang: 'en' | 'de' | 'fr' };
+const t = locales[lang];
+const s = t.imprint;
+---
+<BaseLayout lang={lang} t={t} pageMeta={s.meta} currentPath="imprint/">
+
+  <main class="legal-page">
+    <div class="container">
+      <div class="legal-content">
+        <a href={`/${lang}/`} class="back-link">{s.backLink}</a>
+
+        <h1>Impressum</h1>
+
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <div class="contact-info">
+          <p>
+            <strong>Frederik Lüders</strong><br />
+            c/o Impressumservice Dein-Impressum<br />
+            Stettiner Straße 41<br />
+            35410 Hungen<br />
+            Deutschland
+          </p>
+        </div>
+
+        <h2>Kontakt</h2>
+        <p>
+          Telefon: +49 15679 683592<br />
+          E-Mail: <a href="mailto:hello@lueders.app">hello@lueders.app</a><br />
+          Website: <a href="https://lueders.app" target="_blank" rel="noopener noreferrer">lueders.app</a>
+        </p>
+
+        <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+        <p>
+          Frederik Lüders<br />
+          c/o Impressumservice Dein-Impressum<br />
+          Stettiner Straße 41<br />
+          35410 Hungen<br />
+          Deutschland
+        </p>
+
+        <h2>Haftungsausschluss</h2>
+
+        <h3>Haftung für Inhalte</h3>
+        <p>
+          Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+          Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+          Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten
+          nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir jedoch nicht
+          verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach
+          Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+        </p>
+
+        <h3>Haftung für Links</h3>
+        <p>
+          Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen
+          Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+          Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der
+          Seiten verantwortlich.
+        </p>
+
+        <h3>Urheberrecht</h3>
+        <p>
+          Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
+          dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art
+          der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen
+          Zustimmung des jeweiligen Autors bzw. Erstellers.
+        </p>
+      </div>
+    </div>
+  </main>
+
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding: var(--space-xl) 0;
+    min-height: 70vh;
+  }
+
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .legal-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-md);
+    color: var(--gray-dark);
+  }
+
+  .legal-content h2 {
+    font-size: 1.4rem;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--mint-primary);
+  }
+
+  .legal-content h3 {
+    font-size: 1.05rem;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+    color: var(--gray-dark);
+  }
+
+  .legal-content p {
+    margin-bottom: var(--space-sm);
+    line-height: 1.8;
+    color: var(--gray-medium);
+  }
+
+  .legal-content a {
+    color: var(--mint-primary);
+    text-decoration: none;
+  }
+
+  .legal-content a:hover {
+    text-decoration: underline;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--mint-primary);
+    text-decoration: none;
+    margin-bottom: var(--space-md);
+    transition: color 0.2s ease;
+    font-size: 0.9rem;
+  }
+
+  .back-link:hover {
+    color: var(--gray-dark);
+  }
+
+  .contact-info {
+    background: var(--mint-bg);
+    padding: var(--space-md);
+    border-radius: 8px;
+    margin: var(--space-sm) 0 var(--space-md);
+  }
+
+  .contact-info p {
+    margin: 0;
+    line-height: 1.9;
+  }
+</style>

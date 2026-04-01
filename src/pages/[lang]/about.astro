@@ -53,8 +53,58 @@ const t = locales[lang];
           ))}
         </p>
 
+        <hr class="about-divider" />
+
+        <p class="story-eyebrow">{t.about.approachEyebrow}</p>
+        <p class="about-text">
+          {t.about.approachText.split('\n').map((line: string, i: number) => (
+            <>{line}{i < t.about.approachText.split('\n').length - 1 && <br />}</>
+          ))}
+        </p>
+
+        <hr class="about-divider" />
+
+        <p class="story-eyebrow">{t.about.whyEyebrow}</p>
+        <p class="about-text">
+          {t.about.whyText.split('\n').map((line: string, i: number) => (
+            <>{line}{i < t.about.whyText.split('\n').length - 1 && <br />}</>
+          ))}
+        </p>
+
       </div>
     </div>
   </main>
 
 </BaseLayout>
+
+<style>
+  .about-page {
+    padding: var(--space-xl) 0 var(--space-xxl) 0;
+    min-height: 60vh;
+  }
+
+  .about-content {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    color: var(--gray-medium);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.85;
+    margin-bottom: var(--space-sm);
+  }
+
+  .about-birds {
+    padding-left: var(--space-sm);
+    border-left: 2px solid var(--mint-light);
+  }
+
+  .about-divider {
+    border: none;
+    border-top: 1px solid var(--gray-light);
+    margin: var(--space-lg) 0;
+  }
+</style>

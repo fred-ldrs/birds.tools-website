@@ -79,7 +79,26 @@
     "flockEyebrow": "Der Schwarm",
     "flockIntro": "Jeder Vogel hat eine Rolle.",
     "flockText": "Die Eule wacht über die Nacht.\nDie Taube trägt Erinnerungen.\nDas Rotkehlchen bringt Wärme.\nDie Blaumeise hilft im Alltag.\nDie Elster bewahrt, was zählt.",
-    "flockOutro": "Ein kleiner Schwarm, jeder mit einem Zweck.\nEine Familie von Vögeln für deine Familie."
+    "flockOutro": "Ein kleiner Schwarm, jeder mit einem Zweck.\nEine Familie von Vögeln für deine Familie.",
+    "approachEyebrow": "Unser Ansatz",
+    "approachText": "Kleine Apps. Je ein Zweck.\nKeine Konten. Keine Clouds. Kein Lärm.\nNur einfache Tools, die nah bei dir bleiben —\nwie kleine Vögel, die still auf deinem Alltag sitzen.",
+    "whyEyebrow": "Warum wir existieren",
+    "whyText": "Familien brauchen keine größere Komplexität.\nSie brauchen kleine Momente der Ruhe.\nEine festgehaltene Erinnerung.\nEine erleichterte Nacht.\nEine vereinfachte Aufgabe.\nDeshalb existieren die Vögel."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Datenschutz \u2013 birds.family",
+      "description": "Datenschutzerklärung für birds.family \u2013 deine Daten bleiben auf deinem Gerät. Keine Cloud, kein Tracking."
+    },
+    "backLink": "\u2190 Zur\u00fcck zur Startseite",
+    "lastUpdated": "Zuletzt aktualisiert: 9. M\u00e4rz 2026"
+  },
+  "imprint": {
+    "meta": {
+      "title": "Impressum \u2013 birds.family",
+      "description": "Impressum und rechtliche Angaben f\u00fcr birds.family."
+    },
+    "backLink": "\u2190 Zur\u00fcck zur Startseite"
   },
   "bebebirdie": {
     "meta": {

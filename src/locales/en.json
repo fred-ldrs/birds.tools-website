@@ -79,7 +79,26 @@
     "flockEyebrow": "The Flock",
     "flockIntro": "Every bird has a role.",
     "flockText": "The owl watches over the night.\nThe dove carries memories.\nThe robin brings warmth.\nThe blue tit helps with the everyday.\nThe magpie keeps the things that matter.",
-    "flockOutro": "A small flock, each with a purpose.\nA family of birds for your family."
+    "flockOutro": "A small flock, each with a purpose.\nA family of birds for your family.",
+    "approachEyebrow": "Our Approach",
+    "approachText": "Small apps. One purpose each.\nNo accounts. No clouds. No noise.\nJust simple tools that stay close to home —\nlike little birds perched quietly in your day.",
+    "whyEyebrow": "Why We Exist",
+    "whyText": "Families don't need more complexity.\nThey need small moments of calm.\nA memory captured.\nA night made easier.\nA task simplified.\nThat's why the Birds exist."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy \u2013 birds.family",
+      "description": "Privacy Policy for birds.family \u2013 your data stays on your device. No cloud, no tracking."
+    },
+    "backLink": "\u2190 Back to Home",
+    "lastUpdated": "Last updated: March 9, 2026"
+  },
+  "imprint": {
+    "meta": {
+      "title": "Imprint \u2013 birds.family",
+      "description": "Legal imprint and contact information for birds.family."
+    },
+    "backLink": "\u2190 Back to Home"
   },
   "bebebirdie": {
     "meta": {

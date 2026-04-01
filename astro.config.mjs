@@ -14,5 +14,8 @@ export default defineConfig({
   // Static redirects
   redirects: {
     '/': '/en/',
+    '/en/coloring/': '/en/printables/coloring/',
+    '/de/coloring/': '/de/printables/coloring/',
+    '/fr/coloring/': '/fr/printables/coloring/',
   },
 });
